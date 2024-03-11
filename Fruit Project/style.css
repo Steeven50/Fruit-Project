@@ -1,0 +1,70 @@
+/* Global styles */
+* {
+  box-sizing: border-box; /* Include padding and border in an element's total width and height */
+}
+
+/* Enhance focus visibility for accessibility */
+:focus {
+  outline: 2px solid #007BFF; /* Blue outline for focused elements */
+}
+
+/* Basic body styling */
+body {
+  font-family: 'Arial', sans-serif; /* Default font */
+  background: linear-gradient(to right, #ffecd2, #fcb69f); /* Gradient background */
+  padding: 20px; /* Spacing around the page */
+  margin: 0; /* Reset default margin */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Styling for search container */
+.search-container {
+  position: relative; /* Needed for absolute positioning of suggestions */
+  width: 100%; /* Full width of its parent */
+  max-width: 400px; /* Maximum width */
+  margin: auto; /* Center the container */
+}
+
+/* Unified input styling */
+.search-container input {
+  width: 100%; /* Full width to match the parent */
+  padding: 10px; /* Padding for aesthetics */
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 1rem; /* Readable font size */
+}
+
+/* Styling for the suggestions dropdown */
+.search-container .suggestions {
+  position: absolute; /* Position relative to the search container */
+  width: 100%; /* Match width with the input field */
+  border: 1px solid #ccc; /* Light grey border */
+  border-top: none; /* Remove top border */
+  z-index: 1; /* Ensure dropdown is above other content */
+  background-color: white; /* White background */
+  border-bottom-left-radius: 4px; /* Rounded corners at the bottom */
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Slight shadow for depth */
+}
+
+/* Styling for the suggestions list */
+ul {
+  list-style: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+}
+
+/* List item styling */
+ul li {
+  padding: 10px; /* Padding for each suggestion */
+  cursor: pointer; /* Change cursor to indicate clickable items */
+  border-bottom: 1px solid #eee; /* Light grey border between items */
+}
+
+/* Hover state for list items */
+ul li:hover {
+  background-color: #e9ecef; /* Light blue background on hover */
+}
